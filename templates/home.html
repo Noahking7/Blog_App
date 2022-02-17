@@ -6,8 +6,11 @@
 
 <body>
 
-<h1>Home Page</h1>
-<p>My first paragraph in home.</p>
+    {% for post in posts %}
+        <h1>{{ post.title }}</h1>
+        <h3>by {{ post.author }} on {{ post.date_posted }}</h3>
+        <p>{{ post.content }}</p>
+    {% endfor %} 
 
 </body>
 </html>
